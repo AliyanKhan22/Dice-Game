@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        *
+        {
+            margin: 0;
+            background-color: blueviolet;
+        }
+        .main
+        {
+         font-weight: bold;
+         text-align: center;
+         font-size: 50px;
+         color: blueviolet;
+         background-color: rgb(0, 0, 0) ;
+         box-shadow: 5px 5px 5px yellow;
+        }
+        button
+        {
+            color: rgb(0, 0, 0);
+            background-color: rgb(233, 240, 15);
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 32%;
+            margin-left: 43%;
+            box-shadow: 5px 5px 5px black;
+        }
+        .img1 
+        {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+            left: 31%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main">Dice Game</h1>
+    <br>
+    <div id="img" class="img1"></div>
+    <button onclick="roll()">Run Dice</button>
+    <script>
+      function roll (){
+        let image = document.getElementById("img")
+        let rand = Math.floor(Math.random()*6)+1
+        image.innerHTML="<img src=' "+rand+".png' />";
+      }
+    </script>
+</body>
+</html>
